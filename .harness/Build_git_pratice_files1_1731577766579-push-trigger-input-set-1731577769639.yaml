@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_git_pratice_files1_1731577766579-push-trigger-input-set
+  identifier: Build_git_pratice_files1_1731577766579pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: firstproject
+  pipeline:
+    identifier: Build_git_pratice_files1_1731577766579
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
