@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_git_pratice_files1_1731577766579
+  name: Build git-pratice-files1
+  orgIdentifier: default
+  projectIdentifier: firstproject
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: githubconnect
+        repoName: git-pratice-files1
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
